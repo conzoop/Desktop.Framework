@@ -2,123 +2,152 @@
 using System.Threading;
 using System;
 using NUnit.Framework;
+using OpenQA.Selenium;
+using System.Net.NetworkInformation;
+using DriverFactory;
 
-namespace CalculatorTest
+namespace PageObjects
+
 {
-    [TestClass]
-    public class ScenarioStandard : CalculatorSession
+    public class PageObject : Driver
     {
+        Driver driver;
+        #region WebElements
+
+        private By numOne => By.Name("One");
+        private By numTwo => By.Name("Two");
+        private By numThree => By.Name("Three");
+        private By numFour => By.Name("Four");
+        private By numFive => By.Name("Five");
+        private By numSix => By.Name("Six");
+        private By numSeven => By.Name("Seven");
+        private By numEight => By.Name("Eight");
+        private By numNine => By.Name("Nine");
+        private By numZero => By.Name("Zero");
+        private By plus => By.Name("Plus");
+        private By minus => By.Name("Minus");
+        private By multiply => By.Name("Multiply By");
+        private By divide => By.Name("Divide By");
+        private By equals => By.Name("Equals");
+        private By clear => By.Name("Clear");
+
+
+
+        #endregion
+
         private static WindowsElement header;
         private static WindowsElement calculatorResult;
 
-        [TestMethod]
-        public void Addition()
+        public void ClickOne()
         {
-            // Find the buttons by their names and click them in sequence to perform 1 + 7 = 8
-            session.FindElementByName("One").Click();
-            session.FindElementByName("Plus").Click();
-            session.FindElementByName("Seven").Click();
-            session.FindElementByName("Equals").Click();
-            Assert.AreEqual("8", GetCalculatorResultText());
+            driver.FindElement(numOne).Click();
         }
-
-        [TestMethod]
-        public void Division()
+        public void ClickTwo()
         {
-            // Find the buttons by their accessibility ids and click them in sequence to perform 88 / 11 = 8
-            session.FindElementByAccessibilityId("num8Button").Click();
-            session.FindElementByAccessibilityId("num8Button").Click();
-            session.FindElementByAccessibilityId("divideButton").Click();
-            session.FindElementByAccessibilityId("num1Button").Click();
-            session.FindElementByAccessibilityId("num1Button").Click();
-            session.FindElementByAccessibilityId("equalButton").Click();
-            Assert.AreEqual("8", GetCalculatorResultText());
+            driver.FindElement(numTwo).Click();
         }
-
-        [TestMethod]
-        public void Multiplication()
+        public void ClickThree()
         {
-            // Find the buttons by their names using XPath and click them in sequence to perform 9 x 9 = 81
-            session.FindElementByXPath("//Button[@Name='Nine']").Click();
-            session.FindElementByXPath("//Button[@Name='Multiply by']").Click();
-            session.FindElementByXPath("//Button[@Name='Nine']").Click();
-            session.FindElementByXPath("//Button[@Name='Equals']").Click();
-            Assert.AreEqual("81", GetCalculatorResultText());
+            driver.FindElement(numThree).Click();
         }
-
-        [TestMethod]
-        public void Subtraction()
+        public void ClickFour()
         {
-            // Find the buttons by their accessibility ids using XPath and click them in sequence to perform 9 - 1 = 8
-            session.FindElementByXPath("//Button[@AutomationId=\"num9Button\"]").Click();
-            session.FindElementByXPath("//Button[@AutomationId=\"minusButton\"]").Click();
-            session.FindElementByXPath("//Button[@AutomationId=\"num1Button\"]").Click();
-            session.FindElementByXPath("//Button[@AutomationId=\"equalButton\"]").Click();
-            Assert.AreEqual("8", GetCalculatorResultText());
+            driver.FindElement(numFour).Click();
         }
-
-        [TestMethod]
-        [DataRow("One", "Plus", "Seven", "8")]
-        [DataRow("Nine", "Minus", "One", "8")]
-        [DataRow("Eight", "Divide by", "Eight", "1")]
-        public void Templatized(string input1, string operation, string input2, string expectedResult)
+        public void ClickFive()
         {
-            // Run sequence of button presses specified above and validate the results
-            session.FindElementByName(input1).Click();
-            session.FindElementByName(operation).Click();
-            session.FindElementByName(input2).Click();
-            session.FindElementByName("Equals").Click();
-            Assert.AreEqual(expectedResult, GetCalculatorResultText());
+            driver.FindElement(numFive).Click();
         }
-
-        [ClassInitialize]
-        public static void ClassInitialize(TestContext context)
+        public void ClickSix()
         {
-            // Create session to launch a Calculator window
-            Setup(context);
-
-            // Identify calculator mode by locating the header
-            try
-            {
-                header = session.FindElementByAccessibilityId("Header");
-            }
-            catch
-            {
-                header = session.FindElementByAccessibilityId("ContentPresenter");
-            }
-
-            // Ensure that calculator is in standard mode
-            if (!header.Text.Equals("Standard", StringComparison.OrdinalIgnoreCase))
-            {
-                session.FindElementByAccessibilityId("TogglePaneButton").Click();
-                Thread.Sleep(TimeSpan.FromSeconds(1));
-                var splitViewPane = session.FindElementByClassName("SplitViewPane");
-                splitViewPane.FindElementByName("Standard Calculator").Click();
-                Thread.Sleep(TimeSpan.FromSeconds(1));
-                Assert.IsTrue(header.Text.Equals("Standard", StringComparison.OrdinalIgnoreCase));
-            }
-
-            // Locate the calculatorResult element
-            calculatorResult = session.FindElementByAccessibilityId("CalculatorResults");
-            Assert.IsNotNull(calculatorResult);
+            driver.FindElement(numSix).Click();
         }
-
-        [ClassCleanup]
-        public static void ClassCleanup()
+        public void ClickSeven()
         {
-            TearDown();
+            driver.FindElement(numSeven).Click();
         }
-
-        [TestInitialize]
+        public void ClickEight()
+        {
+            driver.FindElement(numEight).Click();
+        }
+        public void ClickNine()
+        {
+            driver.FindElement(numNine).Click();
+        }
+        public void ClickZero()
+        {
+            driver.FindElement(numZero).Click();
+        }
+        public void ClickPlus()
+        {
+            driver.FindElement(plus).Click();
+        }
+        public void ClickMinus()
+        {
+            driver.FindElement(minus).Click();
+        }
+        public void ClickMultiply()
+        {
+            driver.FindElement(multiply).Click();
+        }
+        public void ClickDivide()
+        {
+            driver.FindElement(divide).Click();
+        }
+        public void ClickEquals()
+        {
+            driver.FindElement(equals).Click();
+        }        
         public void Clear()
         {
-            session.FindElementByName("Clear").Click();
+            driver.FindElement(clear).Click();
             Assert.AreEqual("0", GetCalculatorResultText());
         }
-
-        private string GetCalculatorResultText()
+        public string GetCalculatorResultText()
         {
             return calculatorResult.Text.Replace("Display is", string.Empty).Trim();
         }
+
+
+
+
+        //Assert.AreEqual(expectedResult, GetCalculatorResultText());
+
+
+
+        //public static void ClassInitialize(TestContext context)
+        //{
+        //    // Create session to launch a Calculator window
+        //    Setup(context);
+
+        //    // Identify calculator mode by locating the header
+        //    try
+        //    {
+        //        header = driver.FindElementByAccessibilityId("Header");
+        //    }
+        //    catch
+        //    {
+        //        header = driver.FindElementByAccessibilityId("ContentPresenter");
+        //    }
+
+        //    // Ensure that calculator is in standard mode
+        //    if (!header.Text.Equals("Standard", StringComparison.OrdinalIgnoreCase))
+        //    {
+        //        driver.FindElementByAccessibilityId("TogglePaneButton").Click();
+        //        Thread.Sleep(TimeSpan.FromSeconds(1));
+        //        var splitViewPane = driver.FindElementByClassName("SplitViewPane");
+        //        splitViewPane.FindElementByName("Standard Calculator").Click();
+        //        Thread.Sleep(TimeSpan.FromSeconds(1));
+        //        Assert.IsTrue(header.Text.Equals("Standard", StringComparison.OrdinalIgnoreCase));
+        //    }
+
+        //    // Locate the calculatorResult element
+        //    calculatorResult = driver.FindElementByAccessibilityId("CalculatorResults");
+        //    Assert.IsNotNull(calculatorResult);
+        //}
+
+
+
     }
 }
+
