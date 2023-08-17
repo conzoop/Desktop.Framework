@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/29vjIS4L0EWv617bUpF81r/UgZqywfsKTSXHb+wHiZMJDBDpzB1KiqcLw4ofqZU2zdDJh+6QRUq2SKIATCrRA==",
+  "dgSpecHash": "gZ+RB3enXwGPeYVtqGwyxhKh6R24BwCmkKaRHLG8v7MtoIuGYOhnG09BV/spnsTWnttIY2RCVmVsnHhGXwATeg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\connor.griffiths\\source\\repos\\ConnorGriffithsRoqDesktopApp\\ConnorGriffithsRoqDesktopApp\\ConnorGriffithsRoqDesktopApp.csproj",
+  "projectFilePath": "C:\\Users\\connor.griffiths\\Source\\Repos\\Desktop.Framework\\ConnorGriffithsRoqDesktopApp\\ConnorGriffithsRoqDesktopApp\\ConnorGriffithsRoqDesktopApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\connor.griffiths\\.nuget\\packages\\appium.webdriver\\4.4.5\\appium.webdriver.4.4.5.nupkg.sha512",
     "C:\\Users\\connor.griffiths\\.nuget\\packages\\bodi\\1.5.0\\bodi.1.5.0.nupkg.sha512",
