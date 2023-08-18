@@ -1,4 +1,4 @@
-﻿using DriverFactory;
+﻿using Driverfactory;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
@@ -12,9 +12,9 @@ namespace ConnorGriffithsRoqDesktopApp.CalculatorSteps
     [Binding]
     public class CalculatorSteps : PageObject  
     {
-        Driver driver = new Driver();
+       //_driver
 
-        PageObject pageObject;
+       // PageObject ;
 
 
         [Given(@"I add 7 and 2")]

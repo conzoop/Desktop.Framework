@@ -10,6 +10,7 @@
         "dependencies": {
           "Appium.WebDriver": "4.4.5",
           "FluentAssertions": "6.2.0",
+          "Gravity.Drivers.Appium": "2019.9.4.1",
           "Microsoft.NET.Test.Sdk": "17.0.0",
           "NUnit3TestAdapter": "4.1.0",
           "SpecFlow.NUnit": "3.9.40",
@@ -28,12 +29,6 @@
           "Selenium.Support": "3.141.0",
           "Selenium.WebDriver": "3.141.0",
           "System.Drawing.Common": "4.7.2"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Appium.Net.dll": {
-            "assemblyVersion": "4.4.5.0",
-            "fileVersion": "4.4.5.0"
-          }
         }
       },
       "BoDi/1.5.0": {
@@ -94,6 +89,21 @@
           }
         }
       },
+      "Gravity.Drivers.Appium/2019.9.4.1": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "Newtonsoft.Json": "13.0.1",
+          "Selenium.Support": "3.141.0",
+          "Selenium.WebDriver": "3.141.0",
+          "System.Drawing.Common": "4.7.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Appium.Net.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.0"
+          }
+        }
+      },
       "Microsoft.CodeCoverage/17.0.0": {
         "runtime": {
           "lib/netcoreapp1.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {
@@ -102,6 +112,7 @@
           }
         }
       },
+      "Microsoft.CSharp/4.5.0": {},
       "Microsoft.DotNet.PlatformAbstractions/1.0.3": {
         "dependencies": {
           "System.AppContext": "4.1.0",
@@ -1268,12 +1279,26 @@
       "path": "gherkin/19.0.3",
       "hashPath": "gherkin.19.0.3.nupkg.sha512"
     },
+    "Gravity.Drivers.Appium/2019.9.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-z/JzZuiXD+p03a7hjdd7x9y6BrNBJpFHyLewSYnZ5A6I810RGPpk8St/isUDfFCMqoKKMNMBq+UjNVK9QIVjlA==",
+      "path": "gravity.drivers.appium/2019.9.4.1",
+      "hashPath": "gravity.drivers.appium.2019.9.4.1.nupkg.sha512"
+    },
     "Microsoft.CodeCoverage/17.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-+B+09FPYBtf+cXfZOPIgpnP5mzLq5QdlBo+JEFy9CdqBaWHWE/YMY0Mos9uDsZhcgFegJm9GigAgMyqBZyfq+Q==",
       "path": "microsoft.codecoverage/17.0.0",
       "hashPath": "microsoft.codecoverage.17.0.0.nupkg.sha512"
+    },
+    "Microsoft.CSharp/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
+      "path": "microsoft.csharp/4.5.0",
+      "hashPath": "microsoft.csharp.4.5.0.nupkg.sha512"
     },
     "Microsoft.DotNet.PlatformAbstractions/1.0.3": {
       "type": "package",

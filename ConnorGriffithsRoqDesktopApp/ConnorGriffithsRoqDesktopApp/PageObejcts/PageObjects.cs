@@ -4,14 +4,21 @@ using System;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using System.Net.NetworkInformation;
-using DriverFactory;
+using Driverfactory;
+using SeleniumExtras;
+using ConnorGriffithsRoqDesktopApp.CalculatorSteps;
+using SeleniumExtras.PageObjects;
+using OpenQA.Selenium.Appium;
 
 namespace PageObjects
 
 {
     public class PageObject : Driver
     {
-        Driver driver;
+        public static Driver driverFactory = new Driver();
+
+        public static IWebDriver _driver = driverFactory.GetDriver();
+
         #region WebElements
 
         private By numOne => By.Name("One");
@@ -35,78 +42,82 @@ namespace PageObjects
 
         #endregion
 
-        private static WindowsElement header;
-        private static WindowsElement calculatorResult;
+        //private static WindowsElement header;
+        //private static WindowsElement calculatorResult;
+
+       
+
 
         public void ClickOne()
         {
-            driver.FindElement(numOne).Click();
+            
+            _driver.FindElement(numOne).Click();
         }
         public void ClickTwo()
         {
-            driver.FindElement(numTwo).Click();
+            _driver.FindElement(numTwo).Click();
         }
         public void ClickThree()
         {
-            driver.FindElement(numThree).Click();
+            _driver.FindElement(numThree).Click();
         }
         public void ClickFour()
         {
-            driver.FindElement(numFour).Click();
+            _driver.FindElement(numFour).Click();
         }
         public void ClickFive()
         {
-            driver.FindElement(numFive).Click();
+            _driver.FindElement(numFive).Click();
         }
         public void ClickSix()
         {
-            driver.FindElement(numSix).Click();
+            _driver.FindElement(numSix).Click();
         }
         public void ClickSeven()
         {
-            driver.FindElement(numSeven).Click();
+            _driver.FindElement(numSeven).Click();
         }
         public void ClickEight()
         {
-            driver.FindElement(numEight).Click();
+            _driver.FindElement(numEight).Click();
         }
         public void ClickNine()
         {
-            driver.FindElement(numNine).Click();
+            _driver.FindElement(numNine).Click();
         }
         public void ClickZero()
         {
-            driver.FindElement(numZero).Click();
+            _driver.FindElement(numZero).Click();
         }
         public void ClickPlus()
         {
-            driver.FindElement(plus).Click();
+            _driver.FindElement(plus).Click();
         }
         public void ClickMinus()
         {
-            driver.FindElement(minus).Click();
+            _driver.FindElement(minus).Click();
         }
         public void ClickMultiply()
         {
-            driver.FindElement(multiply).Click();
+            _driver.FindElement(multiply).Click();
         }
         public void ClickDivide()
         {
-            driver.FindElement(divide).Click();
+            _driver.FindElement(divide).Click();
         }
         public void ClickEquals()
         {
-            driver.FindElement(equals).Click();
+            _driver.FindElement(equals).Click();
         }        
         public void Clear()
         {
-            driver.FindElement(clear).Click();
-            Assert.AreEqual("0", GetCalculatorResultText());
+            _driver.FindElement(clear).Click();
+            //Assert.AreEqual("0", GetCalculatorResultText());
         }
-        public string GetCalculatorResultText()
-        {
-            return calculatorResult.Text.Replace("Display is", string.Empty).Trim();
-        }
+        //public string GetCalculatorResultText()
+        //{
+        //    return calculatorResult.Text.Replace("Display is", string.Empty).Trim();
+        //}
 
 
 
@@ -117,32 +128,32 @@ namespace PageObjects
 
         //public static void ClassInitialize(TestContext context)
         //{
-        //    // Create session to launch a Calculator window
+        //    // Create _driver to launch a Calculator window
         //    Setup(context);
 
         //    // Identify calculator mode by locating the header
         //    try
         //    {
-        //        header = driver.FindElementByAccessibilityId("Header");
+        //        header = _driver.FindElementByAccessibilityId("Header");
         //    }
         //    catch
         //    {
-        //        header = driver.FindElementByAccessibilityId("ContentPresenter");
+        //        header = _driver.FindElementByAccessibilityId("ContentPresenter");
         //    }
 
         //    // Ensure that calculator is in standard mode
         //    if (!header.Text.Equals("Standard", StringComparison.OrdinalIgnoreCase))
         //    {
-        //        driver.FindElementByAccessibilityId("TogglePaneButton").Click();
+        //        _driver.FindElementByAccessibilityId("TogglePaneButton").Click();
         //        Thread.Sleep(TimeSpan.FromSeconds(1));
-        //        var splitViewPane = driver.FindElementByClassName("SplitViewPane");
+        //        var splitViewPane = _driver.FindElementByClassName("SplitViewPane");
         //        splitViewPane.FindElementByName("Standard Calculator").Click();
         //        Thread.Sleep(TimeSpan.FromSeconds(1));
         //        Assert.IsTrue(header.Text.Equals("Standard", StringComparison.OrdinalIgnoreCase));
         //    }
 
         //    // Locate the calculatorResult element
-        //    calculatorResult = driver.FindElementByAccessibilityId("CalculatorResults");
+        //    calculatorResult = _driver.FindElementByAccessibilityId("CalculatorResults");
         //    Assert.IsNotNull(calculatorResult);
         //}
 

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "gZ+RB3enXwGPeYVtqGwyxhKh6R24BwCmkKaRHLG8v7MtoIuGYOhnG09BV/spnsTWnttIY2RCVmVsnHhGXwATeg==",
+  "dgSpecHash": "ibKdcdfsod3svdSPXK/Izo5EtpFFQxYsfXBFqQJoRwH8SFAyjB6H2GTPw9Wf0hmz0HmR0xpQTV22AvETZhmnpw==",
   "success": true,
   "projectFilePath": "C:\\Users\\connor.griffiths\\Source\\Repos\\Desktop.Framework\\ConnorGriffithsRoqDesktopApp\\ConnorGriffithsRoqDesktopApp\\ConnorGriffithsRoqDesktopApp.csproj",
   "expectedPackageFiles": [
@@ -10,7 +10,9 @@
     "C:\\Users\\connor.griffiths\\.nuget\\packages\\dotnetseleniumextras.pageobjects\\3.11.0\\dotnetseleniumextras.pageobjects.3.11.0.nupkg.sha512",
     "C:\\Users\\connor.griffiths\\.nuget\\packages\\fluentassertions\\6.2.0\\fluentassertions.6.2.0.nupkg.sha512",
     "C:\\Users\\connor.griffiths\\.nuget\\packages\\gherkin\\19.0.3\\gherkin.19.0.3.nupkg.sha512",
+    "C:\\Users\\connor.griffiths\\.nuget\\packages\\gravity.drivers.appium\\2019.9.4.1\\gravity.drivers.appium.2019.9.4.1.nupkg.sha512",
     "C:\\Users\\connor.griffiths\\.nuget\\packages\\microsoft.codecoverage\\17.0.0\\microsoft.codecoverage.17.0.0.nupkg.sha512",
+    "C:\\Users\\connor.griffiths\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\connor.griffiths\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\1.0.3\\microsoft.dotnet.platformabstractions.1.0.3.nupkg.sha512",
     "C:\\Users\\connor.griffiths\\.nuget\\packages\\microsoft.extensions.dependencymodel\\1.0.3\\microsoft.extensions.dependencymodel.1.0.3.nupkg.sha512",
     "C:\\Users\\connor.griffiths\\.nuget\\packages\\microsoft.net.test.sdk\\17.0.0\\microsoft.net.test.sdk.17.0.0.nupkg.sha512",

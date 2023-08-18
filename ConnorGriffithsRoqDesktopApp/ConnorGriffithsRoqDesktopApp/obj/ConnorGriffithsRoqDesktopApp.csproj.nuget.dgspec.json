@@ -49,6 +49,10 @@
               "target": "Package",
               "version": "[6.2.0, )"
             },
+            "Gravity.Drivers.Appium": {
+              "target": "Package",
+              "version": "[2019.9.4.1, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.0.0, )"
