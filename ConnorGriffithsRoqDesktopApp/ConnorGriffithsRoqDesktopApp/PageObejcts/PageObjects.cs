@@ -17,7 +17,7 @@ namespace PageObjects
     {
         public static Driver driverFactory = new Driver();
 
-        public static IWebDriver _driver = driverFactory.GetDriver();
+        public static IWebDriver _driver = GetDriver();
 
         #region WebElements
 
