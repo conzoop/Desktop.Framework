@@ -17,7 +17,6 @@ namespace PageObjects
     {
         public static Driver driverFactory = new Driver();
 
-        public static IWebDriver _driver = GetDriver();
 
         #region WebElements
 
@@ -33,24 +32,47 @@ namespace PageObjects
         private By numZero => By.Name("Zero");
         private By plus => By.Name("Plus");
         private By minus => By.Name("Minus");
-        private By multiply => By.Name("Multiply By");
-        private By divide => By.Name("Divide By");
+        private By multiply => By.Name("Multiply by");
+        private By divide => By.Name("Divide by");
         private By equals => By.Name("Equals");
         private By clear => By.Name("Clear");
-
-
-
+        private By power => By.Name("Square");
+        private By navigation => By.Name("Open Navigation");
+        private By scicalcmode => By.Name("Scientific Calculator");
         #endregion
 
         //private static WindowsElement header;
         //private static WindowsElement calculatorResult;
 
-       
 
+        public void GetCalculatorResultTextSquare()
+        {
+            _driver.FindElementByName("Display is 81");
+        }
+
+        public void GetCalculatorResultTextAddition()
+        {
+            _driver.FindElementByName("Display is 10");
+        }
+
+        public void GetCalculatorResultTextSubtraction()
+        {
+            _driver.FindElementByName("Display is 6");
+        }
+
+        public void GetCalculatorResultTextMultiplication()
+        {
+            _driver.FindElementByName("Display is 16");
+        }
+
+        public void GetCalculatorResultTextDivision()
+        {
+            _driver.FindElementByName("Display is 4");
+        }
 
         public void ClickOne()
         {
-            
+
             _driver.FindElement(numOne).Click();
         }
         public void ClickTwo()
@@ -108,54 +130,25 @@ namespace PageObjects
         public void ClickEquals()
         {
             _driver.FindElement(equals).Click();
-        }        
+        }
+
+        public void ScientificCalculator()
+        {
+            _driver.FindElement(navigation).Click();
+            _driver.FindElement(scicalcmode).Click();
+        }
+        public void PowerButton()
+        {
+            _driver.FindElement(power).Click();
+        }
+
         public void Clear()
         {
             _driver.FindElement(clear).Click();
             //Assert.AreEqual("0", GetCalculatorResultText());
         }
-        //public string GetCalculatorResultText()
-        //{
-        //    return calculatorResult.Text.Replace("Display is", string.Empty).Trim();
-        //}
 
-
-
-
-        //Assert.AreEqual(expectedResult, GetCalculatorResultText());
-
-
-
-        //public static void ClassInitialize(TestContext context)
-        //{
-        //    // Create _driver to launch a Calculator window
-        //    Setup(context);
-
-        //    // Identify calculator mode by locating the header
-        //    try
-        //    {
-        //        header = _driver.FindElementByAccessibilityId("Header");
-        //    }
-        //    catch
-        //    {
-        //        header = _driver.FindElementByAccessibilityId("ContentPresenter");
-        //    }
-
-        //    // Ensure that calculator is in standard mode
-        //    if (!header.Text.Equals("Standard", StringComparison.OrdinalIgnoreCase))
-        //    {
-        //        _driver.FindElementByAccessibilityId("TogglePaneButton").Click();
-        //        Thread.Sleep(TimeSpan.FromSeconds(1));
-        //        var splitViewPane = _driver.FindElementByClassName("SplitViewPane");
-        //        splitViewPane.FindElementByName("Standard Calculator").Click();
-        //        Thread.Sleep(TimeSpan.FromSeconds(1));
-        //        Assert.IsTrue(header.Text.Equals("Standard", StringComparison.OrdinalIgnoreCase));
-        //    }
-
-        //    // Locate the calculatorResult element
-        //    calculatorResult = _driver.FindElementByAccessibilityId("CalculatorResults");
-        //    Assert.IsNotNull(calculatorResult);
-        //}
+        
 
 
 

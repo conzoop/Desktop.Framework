@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\connor.griffiths\\Source\\Repos\\Desktop.Framework\\ConnorGriffithsRoqDesktopApp\\ConnorGriffithsRoqDesktopApp\\ConnorGriffithsRoqDesktopApp.csproj": {}
+    "C:\\Users\\connor.griffiths\\source\\repos\\ROQ Framework-final\\Desktop.Framework\\ConnorGriffithsRoqDesktopApp\\ConnorGriffithsRoqDesktopApp\\ConnorGriffithsRoqDesktopApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\connor.griffiths\\Source\\Repos\\Desktop.Framework\\ConnorGriffithsRoqDesktopApp\\ConnorGriffithsRoqDesktopApp\\ConnorGriffithsRoqDesktopApp.csproj": {
+    "C:\\Users\\connor.griffiths\\source\\repos\\ROQ Framework-final\\Desktop.Framework\\ConnorGriffithsRoqDesktopApp\\ConnorGriffithsRoqDesktopApp\\ConnorGriffithsRoqDesktopApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\connor.griffiths\\Source\\Repos\\Desktop.Framework\\ConnorGriffithsRoqDesktopApp\\ConnorGriffithsRoqDesktopApp\\ConnorGriffithsRoqDesktopApp.csproj",
+        "projectUniqueName": "C:\\Users\\connor.griffiths\\source\\repos\\ROQ Framework-final\\Desktop.Framework\\ConnorGriffithsRoqDesktopApp\\ConnorGriffithsRoqDesktopApp\\ConnorGriffithsRoqDesktopApp.csproj",
         "projectName": "ConnorGriffithsRoqDesktopApp",
-        "projectPath": "C:\\Users\\connor.griffiths\\Source\\Repos\\Desktop.Framework\\ConnorGriffithsRoqDesktopApp\\ConnorGriffithsRoqDesktopApp\\ConnorGriffithsRoqDesktopApp.csproj",
+        "projectPath": "C:\\Users\\connor.griffiths\\source\\repos\\ROQ Framework-final\\Desktop.Framework\\ConnorGriffithsRoqDesktopApp\\ConnorGriffithsRoqDesktopApp\\ConnorGriffithsRoqDesktopApp.csproj",
         "packagesPath": "C:\\Users\\connor.griffiths\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\connor.griffiths\\Source\\Repos\\Desktop.Framework\\ConnorGriffithsRoqDesktopApp\\ConnorGriffithsRoqDesktopApp\\obj\\",
+        "outputPath": "C:\\Users\\connor.griffiths\\source\\repos\\ROQ Framework-final\\Desktop.Framework\\ConnorGriffithsRoqDesktopApp\\ConnorGriffithsRoqDesktopApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\connor.griffiths\\AppData\\Roaming\\NuGet\\NuGet.Config",

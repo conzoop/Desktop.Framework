@@ -15,9 +15,10 @@ namespace Driverfactory
         private const string WindowsApplicationDriverUrl = "http://127.0.0.1:4723";
         private const string CalculatorAppId = "Microsoft.WindowsCalculator_8wekyb3d8bbwe!App";
 
-        private static WindowsDriver<WindowsElement> _driver;
+        public static WindowsDriver<WindowsElement> _driver;
 
-        public static WindowsDriver<WindowsElement> GetDriver()
+        [BeforeScenario]
+        public void GetDriver()
         {
             if (_driver == null)
             {
@@ -30,13 +31,13 @@ namespace Driverfactory
 
                 if (_driver == null)
                 {
-                    throw new Exception("Failed to initialize Appium driver.");
+                    throw new Exception("Failed to initialise Appium driver.");
                 }
 
                 _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1.5);
             }
 
-            return _driver;
+            
         }
 
         public static void QuitDriver()
@@ -48,9 +49,6 @@ namespace Driverfactory
             }
         }
 
-        internal object FindElement(By numOne)
-        {
-            throw new NotImplementedException();
-        }
+     
     }
 }
