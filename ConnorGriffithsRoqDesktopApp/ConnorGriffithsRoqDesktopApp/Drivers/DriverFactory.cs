@@ -49,6 +49,12 @@ namespace Driverfactory
             }
         }
 
-     
+        [AfterScenario]
+        public void AfterScenario()
+        {
+            _driver?.Dispose();
+        }
+
+
     }
 }
