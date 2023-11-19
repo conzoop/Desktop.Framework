@@ -28,6 +28,13 @@ And I click 2
 And I click equals
 Then I validate the division answer is correct
 
+Scenario: DivisionNegative
+Given I click 8
+When I click divide
+And I click 2
+And I click equals
+Then I validate the division negative answer is correct
+
 Scenario: Sqaure
 Given I click 9
 When I square the selected number

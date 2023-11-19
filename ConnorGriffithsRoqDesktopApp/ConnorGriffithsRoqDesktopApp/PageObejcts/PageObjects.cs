@@ -19,7 +19,6 @@ namespace PageObjects
 
 
         #region WebElements
-
         private By numOne => By.Name("One");
         private By numTwo => By.Name("Two");
         private By numThree => By.Name("Three");
@@ -41,38 +40,8 @@ namespace PageObjects
         private By scicalcmode => By.Name("Scientific Calculator");
         #endregion
 
-        //private static WindowsElement header;
-        //private static WindowsElement calculatorResult;
-
-
-        public void GetCalculatorResultTextSquare()
-        {
-            _driver.FindElementByName("Display is 81");
-        }
-
-        public void GetCalculatorResultTextAddition()
-        {
-            _driver.FindElementByName("Display is 10");
-        }
-
-        public void GetCalculatorResultTextSubtraction()
-        {
-            _driver.FindElementByName("Display is 6");
-        }
-
-        public void GetCalculatorResultTextMultiplication()
-        {
-            _driver.FindElementByName("Display is 16");
-        }
-
-        public void GetCalculatorResultTextDivision()
-        {
-            _driver.FindElementByName("Display is 4");
-        }
-
         public void ClickOne()
         {
-
             _driver.FindElement(numOne).Click();
         }
         public void ClickTwo()
@@ -145,13 +114,36 @@ namespace PageObjects
         public void Clear()
         {
             _driver.FindElement(clear).Click();
-            //Assert.AreEqual("0", GetCalculatorResultText());
+        }
+        public void GetCalculatorResultTextSquare()
+        {
+            _driver.FindElementByName("Display is 81");
         }
 
-        
+        public void GetCalculatorResultTextAddition()
+        {
+            _driver.FindElementByName("Display is 10");
+        }
 
+        public void GetCalculatorResultTextSubtraction()
+        {
+            _driver.FindElementByName("Display is 6");
+        }
 
+        public void GetCalculatorResultTextMultiplication()
+        {
+            _driver.FindElementByName("Display is 16");
+        }
 
+        public void GetCalculatorResultTextDivision()
+        {
+            _driver.FindElementByName("Display is 4");
+        }
+
+        public void GetCalculatorResultTextDivisionNegative()
+        {
+            _driver.FindElementByName("Display is 90000000");
+        }
     }
 }
 

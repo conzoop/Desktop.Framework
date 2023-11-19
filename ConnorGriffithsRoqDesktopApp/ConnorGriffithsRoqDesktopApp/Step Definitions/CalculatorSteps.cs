@@ -20,43 +20,32 @@ namespace ConnorGriffithsRoqDesktopApp.CalculatorSteps
         [Given(@"I click 9")]
         public void WhenIClickNine()
         {
-
             ClickNine();
+        }
 
+        [When(@"I click 2")]
+        public void WhenIClickTwo()
+        {
+            ClickTwo();
         }
 
         [Given(@"I click 8")]
         public void WhenIClickEight()
         {
-
             ClickEight();
-
         }
 
         [When(@"I click add")]
         public void WhenIClickAAdd()
         {
-
             ClickPlus();
-
         }
 
         [When(@"I click equals")]
         public void WhenIClickEquals()
         {
-
             ClickEquals();
-
-        }
-
-
-        [When(@"I click 2")]
-        public void WhenIClickTwo()
-        {
-
-            ClickTwo();
-
-        }
+        }       
 
         [When(@"I click subtract")]
         public void WhenIClickMinus()
@@ -81,7 +70,6 @@ namespace ConnorGriffithsRoqDesktopApp.CalculatorSteps
         {
             ScientificCalculator();
             PowerButton();
-
         }
 
         [Then(@"I validate the addition answer is correct")]
@@ -106,6 +94,12 @@ namespace ConnorGriffithsRoqDesktopApp.CalculatorSteps
         public void DivisionAnswer()
         {
             GetCalculatorResultTextDivision();
+        }
+
+        [Then(@"I validate the division negative answer is correct")]
+        public void DivisionNegativeAnswer()
+        {
+            GetCalculatorResultTextDivisionNegative();
         }
 
         [Then(@"I validate the answer when squaring 9 is correct")]
